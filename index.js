@@ -100,4 +100,4 @@ const handleMouseWheel = debounce((ev) => {
   selectedIndex++;
   rotateCarousel();
 }, 50);
-// window.addEventListener("wheel", handleMouseWheel);
+window.addEventListener("wheel", handleMouseWheel);
