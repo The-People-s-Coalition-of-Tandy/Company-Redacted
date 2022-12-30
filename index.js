@@ -100,7 +100,7 @@ const handleMouseWheel = debounce((ev) => {
   selectedIndex++;
   rotateCarousel();
 }, 50);
-window.addEventListener("wheel", handleMouseWheel);
+// window.addEventListener("wheel", handleMouseWheel);
 
 const video = document.getElementById("works__background-video");
 const source = document.getElementById("works__background-source");
