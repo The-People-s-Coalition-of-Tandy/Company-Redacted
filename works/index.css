@@ -1,0 +1,22 @@
+.wall {
+    width: 50%;
+    height: 100%;
+}
+
+.one {
+    background: linear-gradient(to right, rgb(255, 230, 147) 50%, rgb(202, 182, 115) 80%, rgb(172, 154, 98));
+}
+
+.two {
+    background: linear-gradient(to left, rgb(255, 230, 147) 80%, rgb(172, 154, 98));
+}
+
+body {
+    margin: 0;
+    display: flex;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
