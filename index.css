@@ -14,11 +14,23 @@ body {
     overflow: hidden;
 }
 
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 body {
     font-family: sans-serif;
     /* text-align: center; */
     /* background: rgb(13, 19, 22); */
     background: black;
+    filter: url("#displacement-filter");
+    animation: fade-in .1s forwards linear;
 }
 
 .scene {
@@ -72,6 +84,27 @@ body {
     position: absolute;
     z-index: -1;
     opacity: .9;
+}
+
+.works__background {
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    position: absolute;
+    filter: brightness(50%);
+    opacity: 50%;
+}
+
+.works__link,
+.works__link:visited {
+    color: white;
+    margin: 10%;
+    line-height: 100px;
+    font-size: 2rem;
+}
+
+.works__link:hover {
+    color: rgb(170, 170, 170);
 }
 
 h2 {
@@ -135,7 +168,7 @@ h5 {
     outline: 1px solid white;
     background-color: rgba(245, 222, 179, 0);
     color: white;
-    transition: all .1s ease-out ;
+    transition: all .1s ease-out;
 }
 
 .about {
@@ -143,7 +176,17 @@ h5 {
 }
 
 .works {
-    background-color: rgba(127, 255, 212, 0.212);
+    background-color: rgba(22, 20, 7, 0.383);
+}
+
+.works__video {
+    /* opacity: 0%; */
+    transition: opacity .25s ease-in;
+}
+
+.works_video.visible {
+    opacity: 100%;
+    transition: opacity .25s ease-in;
 }
 
 .photos {
@@ -176,6 +219,10 @@ h5 {
     text-decoration-color: rgb(97, 98, 0);
     letter-spacing: 5px;
     transition: letter-spacing .2s ease-out;
+}
+
+.home h2 {
+    text-align: left;
 }
 
 .buttons-container {

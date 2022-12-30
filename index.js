@@ -101,3 +101,31 @@ const handleMouseWheel = debounce((ev) => {
   rotateCarousel();
 }, 50);
 window.addEventListener("wheel", handleMouseWheel);
+
+const video = document.getElementById("works__background-video");
+const source = document.getElementById("works__background-source");
+
+function setWorksBackground(file) {
+  source.src = file;
+  video.pause();
+  video.load();
+  video.play();
+  video.classList.add("visible");
+}
+
+function removeWorksBackground() {
+  source.src = "";
+  video.load();
+  video.classList.remove("visible");
+}
+
+const works = document.getElementsByClassName("works__link");
+
+for (let i = 0; i < works.length; i++) {
+  console.log(works[i]);
+  works[i].addEventListener(
+    "mouseover",
+    setWorksBackground.bind(this, works[i].dataset.videosnippet)
+  );
+  works[i].addEventListener("mouseleave", removeWorksBackground);
+}
