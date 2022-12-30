@@ -58,7 +58,6 @@ body {
     position: absolute;
     width: 90%;
     height: 90%;
-    left: 10px;
     top: 10px;
     font-weight: bold;
     color: white;
@@ -173,6 +172,11 @@ h5 {
 
 .about {
     background-color: rgba(22, 20, 7, 0.383);
+    overflow-y: scroll;
+}
+
+.bio {
+    max-width: 600px;
 }
 
 .works {

@@ -30,9 +30,11 @@
                     </video>
                 </div>
                 <h2>Works</h2>
-                <a href="https://youtu.be/e_qwEk49zV4" class="works__link" data-videoSnippet="./background.mov">Some Land of
+                <a href="https://youtu.be/e_qwEk49zV4" class="works__link" data-videoSnippet="./background.mov">Some
+                    Land of
                     Redemption</a><br>
-                <a href="https://youtu.be/E7oxBOEbPzs" class="works__link" data-videoSnippet="./background.mov">My Apocalypse</a>
+                <a href="https://youtu.be/E7oxBOEbPzs" class="works__link" data-videoSnippet="./background.mov">My
+                    Apocalypse</a>
 
             </div>
 
@@ -84,19 +86,43 @@
 
             <div class="carousel__cell about">
 
-                <p class="bio">
-                    Cole Stapleton is a dance artist and choreographer. Their work has been presented at Impulstanz, the
-                    Center for Performance Research, Crest Festival, Town Stages and H0l0 amongst others. Cole graduated
-                    from NYU in 2019, and has toured nationally and internationally with Nadine Bommer Dance Company,
-                    VESSELS and Sage Horsey & Co.
-                </p>
+                <div class="bio">
+                    <p>
+                        Using fantasy as a guide towards creation, Mimi Doan & Cole Stapleton have been collaborating as
+                        choreographers since 2019. Expanding beyond the purely imaginary or erotic, Company [REDACTED]
+                        utilizes the fantasy of situation and circumstance, emotion and play to create dynamic worlds for
+                        their
+                        pieces. Their first evening-length work, Some Land of Redemption, premiered with two sold out
+                        performances at The Center for Performance Research in February of 2022, and since then they’ve been
+                        invited to create work at Impulstanz in Vienna and at dance festivals throughout New York City.
+                    </p>
+                </div>
 
-                <h2>Credits</h2>
-
-                <p><b>Nadine Bommer Dance Company</b>, Touring Company Artist | 2018 - Present</p>
-                <p><b>VESSELS Dance Company</b>, Company Artist | 2018 - Present</p>
-                <p><b>Chidiac and Dancers</b>, Company Artist | 2019- Present</p>
+                <h2>Performance Credits</h2>
+                <div class="credits">
+                    <div class="credits__performance">
+                        <p><b>The Woods Fundraising Performance, Ridgewood NY</b>, <i>2021</i></p>
+                        <p>Some Land of Redemption - Duets</p>
+                    </div>
+                    <div class="credits__performance">
+                        <p>464 Works in Progress Series, Ridgewood NY, 2022</p>
+                        <p>Some Land of Redemption: Vanity Under the Sun</p>
+                    </div>
+                    <div class="credits__performance">
+                        <p>Center for Performance Research, Williamsburg, NY 2022</p>
+                        <p>Some Land of Redemption</p>
+                    </div>
+                    <div class="credits__performance">
+                        <p>CREST Festival, Greenwood, NY 2022</p>
+                        <p>SLR Redux</p>
+                    </div>
+                    <div class="credits__performance">
+                        <p>Impulstanz, Vienna, Austria 2022</p>
+                        <p>My Apocalypse: ‘Monster Cruising’</p>
+                    </div>
+                </div>
             </div>
+            <div class="carousel__cell collaborators"></div>
             <div class="carousel__cell photos"></div>
         </div>
     </div>
@@ -110,17 +136,17 @@
     <script src="./index.js"></script>
     <svg preserveAspectRatio="none" width="100%" height="100%" style="visibility: invisible; position: absolute;">
         <defs>
-          <filter preserveAspectRatio="none" id="displacement-filter" width="100%" height="100%" x="0" y="0" filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB">
-            <feImage preserveAspectRatio="none" width="100%" height="100%" href="./Assets/waves.jpeg" />
-            <feDisplacementMap preserveAspectRatio="none" id="fedisplacementmap" in="SourceGraphic" xChannelSelector="R" yChannelSelector="B"
-              scale="-20000">
-              <animate attributeName="scale" values="-20000;0" dur="1s" fill="freeze" calcMode="spline"
-                keySplines="0.1 0.8 0.1 1;" />
-            </feDisplacementMap>
-          </filter>
+            <filter preserveAspectRatio="none" id="displacement-filter" width="100%" height="100%" x="0" y="0"
+                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feImage preserveAspectRatio="none" width="100%" height="100%" href="./Assets/waves.jpeg" />
+                <feDisplacementMap preserveAspectRatio="none" id="fedisplacementmap" in="SourceGraphic"
+                    xChannelSelector="R" yChannelSelector="B" scale="-20000">
+                    <animate attributeName="scale" values="-50000;0" dur="1.5s" fill="freeze" calcMode="spline"
+                        keySplines="0.1 0.8 0.1 1;" />
+                </feDisplacementMap>
+            </filter>
         </defs>
-      </svg>
+    </svg>
 </body>
 
 </html>

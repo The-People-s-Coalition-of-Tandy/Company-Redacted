@@ -1,11 +1,11 @@
 var carousel = document.querySelector(".carousel");
 var cells = carousel.querySelectorAll(".carousel__cell");
-var cellCount = 5;
+var cellCount = 6;
 var selectedIndex = 0;
 var cellWidth = carousel.offsetWidth;
 var cellHeight = carousel.offsetHeight;
 console.log(window.innerWidth);
-var isHorizontal = window.innerWidth < 1000 ? false : true;
+var isHorizontal = window.innerWidth < 1000 ? true : true;
 var rotateFn = isHorizontal ? "rotateY" : "rotateX";
 console.log(rotateFn);
 var radius, theta;
