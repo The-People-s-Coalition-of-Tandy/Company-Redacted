@@ -181,8 +181,12 @@ h5 {
     max-width: 600px;
 }
 
+.bio h2 {
+    text-align: left;
+}
+
 .works {
-    background-color: rgba(22, 20, 7, 0.383);
+    background-color: rgba(17, 16, 16, 0.911);
 }
 
 .works__video {
@@ -196,7 +200,7 @@ h5 {
 }
 
 .photos {
-    background-color: rgba(0, 0, 255, 0.493);
+    background-color: rgba(0, 0, 0, 0.493);
 }
 
 .carousel-options {
@@ -241,7 +245,8 @@ h5 {
     gap: 10px;
 }
 
-.next-button, .previous-button {
+.next-button,
+.previous-button {
     background: none;
     border: none;
     color: white;
@@ -249,15 +254,41 @@ h5 {
     font-weight: bold;
 
     cursor: pointer;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
 }
 
+.photos {
+    overflow: scroll;
+}
 
+.photos__gallery-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.photos__gallery {
+    width: 90%;
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    margin: 20px;
+}
+
+.photos__gallery img {
+    width: 100%;
+}
 
 @media only screen and (max-width: 1000px) {
     .carousel__cell {
