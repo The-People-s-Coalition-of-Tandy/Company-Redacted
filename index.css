@@ -10,7 +10,6 @@
 
 html,
 body {
-    /* overscroll-behavior: none; */
     overflow: hidden;
 }
 
@@ -40,6 +39,7 @@ body {
     height: 75vh;
     margin: 80px auto;
     perspective: 1000px;
+    /* overflow-y: hidden; */
 }
 
 .carousel {
@@ -59,7 +59,6 @@ body {
     width: 90%;
     height: 90%;
     top: 10px;
-    font-weight: bold;
     color: white;
     transition: transform 1s, opacity 1s;
     border-radius: 2px;
@@ -177,16 +176,21 @@ h5 {
     overflow-y: scroll;
 }
 
-.bio {
-    max-width: 600px;
+.about h3 {
+    font-size: 1.75rem;
+    text-align: center;
 }
 
-.bio h2 {
-    text-align: left;
+.bio {
+    max-width: 600px;
+    text-align: justify;
+    margin: 0 auto;
+    font-weight: bold;
 }
 
 .works {
     background-color: rgba(17, 16, 16, 0.911);
+    font-weight: bold;
 }
 
 .works__video {
@@ -290,6 +294,25 @@ h5 {
     width: 100%;
 }
 
+.credits {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.credits h3 {
+    padding: 20px;
+}
+
+.credits__performance {
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.credits__show-name {
+    font-size: .9rem;
+    font-style: italic;
+}
+
 @media only screen and (max-width: 1000px) {
     .carousel__cell {
         width: 100%;
@@ -307,5 +330,15 @@ h5 {
 
     .show-info__location {
         display: none;
+    }
+
+    .bio {
+        padding: 0 10px;
+        font-weight: bold;
+    }
+
+    .works__link {
+        font-size: 1.3rem;
+        line-height: 5ch;
     }
 }

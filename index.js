@@ -163,10 +163,10 @@ function handleTouchMove(evt) {
   if (Math.abs(xDiff) > Math.abs(yDiff)) {
     /*most significant*/
     if (xDiff > 0) {
-      selectedIndex--;
+      selectedIndex++;
       rotateCarousel();
     } else {
-      selectedIndex++;
+      selectedIndex--;
       rotateCarousel();
     }
   }
