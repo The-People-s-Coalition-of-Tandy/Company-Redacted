@@ -391,6 +391,7 @@ h5 {
 svg {
     visibility: hidden;
     position: absolute;
+    top: 0;
 }
 
 
@@ -425,6 +426,13 @@ svg {
     .collaborators__bio {
         flex-direction: column;
         margin: 0 auto;
+    }
+
+    .scene {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .collaborators__bio h4 {
@@ -468,7 +476,7 @@ svg {
     }
 
     .carousel-options {
-        bottom: 50px;
+        bottom: 0px;
     }
 
     svg {}
