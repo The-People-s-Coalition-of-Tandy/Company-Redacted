@@ -13,6 +13,8 @@ var img = document.querySelector("#modal-image");
 var lazyLoaded = false;
 
 function rotateCarousel() {
+  cells[selectedIndex % cellCount].classList.add("active");
+
   var angle = theta * selectedIndex * -1;
   carousel.style.transform =
     "translateZ(" + -radius + "px) " + rotateFn + "(" + angle + "deg)";
@@ -22,6 +24,7 @@ var prevButton = document.querySelector(".previous-button");
 prevButton.addEventListener("click", function () {
   !lazyLoaded && lazyLoad();
   selectedIndex--;
+  cells[(selectedIndex + 1) % cellCount].classList.remove("active");
   rotateCarousel();
 });
 
@@ -29,6 +32,7 @@ var nextButton = document.querySelector(".next-button");
 nextButton.addEventListener("click", function () {
   !lazyLoaded && lazyLoad();
   selectedIndex++;
+  cells[(selectedIndex - 1) % cellCount].classList.remove("active");
   rotateCarousel();
 });
 
@@ -117,6 +121,7 @@ function setWorksBackground(file) {
 }
 
 function removeWorksBackground() {
+  video.pause();
   source.src = "";
   video.load();
   video.classList.remove("visible");
