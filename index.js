@@ -12,8 +12,12 @@ const gallery = document.querySelectorAll("#photos__gallery img");
 var img = document.querySelector("#modal-image");
 var lazyLoaded = false;
 
+function mod(n, m) {
+  return ((n % m) + m) % m;
+}
+
 function rotateCarousel() {
-  cells[selectedIndex % cellCount].classList.add("active");
+  cells[Math.abs(mod(selectedIndex, cellCount))].classList.add("active");
 
   var angle = theta * selectedIndex * -1;
   carousel.style.transform =
@@ -24,7 +28,7 @@ var prevButton = document.querySelector(".previous-button");
 prevButton.addEventListener("click", function () {
   !lazyLoaded && lazyLoad();
   selectedIndex--;
-  cells[(selectedIndex + 1) % cellCount].classList.remove("active");
+  cells[Math.abs(mod(selectedIndex + 1, cellCount))].classList.remove("active");
   rotateCarousel();
 });
 
@@ -32,7 +36,7 @@ var nextButton = document.querySelector(".next-button");
 nextButton.addEventListener("click", function () {
   !lazyLoaded && lazyLoad();
   selectedIndex++;
-  cells[(selectedIndex - 1) % cellCount].classList.remove("active");
+  cells[Math.abs(mod(selectedIndex - 1, cellCount))].classList.remove("active");
   rotateCarousel();
 });
 
