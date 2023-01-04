@@ -121,24 +121,24 @@
             <div class="carousel__cell collaborators">
                 <h2>Collaborators</h2>
             </div>
-            
+
             <div class="carousel__cell photos">
                 <h2>Photos</h2>
                 <div class="photos__gallery-wrapper">
-                    <div class="photos__gallery">
-                        <img src="Assets/Photos/JP 1.jpg">
-                        <img src="Assets/Photos/JP 2.jpg">
-                        <img src="Assets/Photos/JP 3.jpg">
-                        <img src="Assets/Photos/JP 4.jpg">
-                        <img src="Assets/Photos/JP 5.jpg">
-                        <img src="Assets/Photos/JP 6.jpg">
-                        <img src="Assets/Photos/JP 7.jpg">
-                        <img src="Assets/Photos/JP 8.jpg">
-                        <img src="Assets/Photos/Mimi 2.JPG">
-                        <img src="Assets/Photos/Mimi 3.JPG">
-                        <img src="Assets/Photos/Photo by Cole Stapleton.JPG">
-                        <img src="Assets/Photos/Photo by Joohee.jpg">
-                        <img src="Assets/Photos/Photo by Mimi.JPG">
+                    <div class="photos__gallery" id="photos__gallery">
+                        <img data-src="Assets/Photos/JP 1-min.jpg">
+                        <img data-src="Assets/Photos/JP 2.jpg">
+                        <img data-src="Assets/Photos/JP 3-min.jpg">
+                        <img data-src="Assets/Photos/JP 4-min.jpg">
+                        <img data-src="Assets/Photos/JP 5-min.jpg">
+                        <img data-src="Assets/Photos/JP 6-min.jpg">
+                        <img data-src="Assets/Photos/JP 7-min.jpg">
+                        <img data-src="Assets/Photos/JP 8-min.jpg">
+                        <img data-src="Assets/Photos/Mimi 2-min.JPG">
+                        <img data-src="Assets/Photos/Mimi 3-min.JPG">
+                        <img data-src="Assets/Photos/Photo by Cole Stapleton-min.JPG">
+                        <img data-src="Assets/Photos/Photo by Joohee-min.jpg">
+                        <img data-src="Assets/Photos/Photo by Mimi-min.JPG">
                     </div>
                 </div>
             </div>
@@ -148,6 +148,10 @@
     <div class="carousel-options">
         <button class="previous-button">&lt;</button>
         <button class="next-button">&gt;</button>
+    </div>
+    <div class="image-modal" id="image-modal">
+        <button onclick="closeModal()" class="modal__close-button">X</button>
+        <img src="" id="modal-image">
     </div>
     <script src="./index.js"></script>
     <svg preserveAspectRatio="none" width="100%" height="100%" style="visibility: invisible; position: absolute;">
@@ -163,6 +167,7 @@
             </filter>
         </defs>
     </svg>
+
 </body>
 
 </html>

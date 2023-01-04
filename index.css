@@ -290,8 +290,13 @@ h5 {
     margin: 20px;
 }
 
+.photos__gallery img:hover {
+    filter: sepia(50%);
+}
+
 .photos__gallery img {
     width: 100%;
+    cursor: pointer;
 }
 
 .credits {
@@ -312,6 +317,41 @@ h5 {
     font-size: .9rem;
     font-style: italic;
 }
+
+.image-modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.856);
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.image-modal.show {
+    display: block;
+}
+
+.image-modal img {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal__close-button {
+    position: absolute;
+    top: 1ch;
+    right: 2ch;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
 
 @media only screen and (max-width: 1000px) {
     .carousel__cell {
@@ -340,5 +380,9 @@ h5 {
     .works__link {
         font-size: 1.3rem;
         line-height: 5ch;
+    }
+
+    img {
+        pointer-events: none;
     }
 }

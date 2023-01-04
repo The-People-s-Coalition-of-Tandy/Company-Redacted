@@ -4,11 +4,13 @@ var cellCount = 6;
 var selectedIndex = 0;
 var cellWidth = carousel.offsetWidth;
 var cellHeight = carousel.offsetHeight;
-console.log(window.innerWidth);
 var isHorizontal = window.innerWidth < 1000 ? true : true;
 var rotateFn = isHorizontal ? "rotateY" : "rotateX";
-console.log(rotateFn);
 var radius, theta;
+const imageModal = document.querySelector("#image-modal");
+const gallery = document.querySelectorAll("#photos__gallery img");
+var img = document.querySelector("#modal-image");
+var lazyLoaded = false;
 
 function rotateCarousel() {
   var angle = theta * selectedIndex * -1;
@@ -18,12 +20,14 @@ function rotateCarousel() {
 
 var prevButton = document.querySelector(".previous-button");
 prevButton.addEventListener("click", function () {
+  !lazyLoaded && lazyLoad();
   selectedIndex--;
   rotateCarousel();
 });
 
 var nextButton = document.querySelector(".next-button");
 nextButton.addEventListener("click", function () {
+  !lazyLoaded && lazyLoad();
   selectedIndex++;
   rotateCarousel();
 });
@@ -95,11 +99,10 @@ const debounce = (callback, wait) => {
   };
 };
 
-const handleMouseWheel = debounce((ev) => {
-  console.log("hello");
-  selectedIndex++;
-  rotateCarousel();
-}, 50);
+// const handleMouseWheel = debounce((ev) => {
+//   selectedIndex++;
+//   rotateCarousel();
+// }, 50);
 // window.addEventListener("wheel", handleMouseWheel);
 
 const video = document.getElementById("works__background-video");
@@ -122,7 +125,6 @@ function removeWorksBackground() {
 const works = document.getElementsByClassName("works__link");
 
 for (let i = 0; i < works.length; i++) {
-  console.log(works[i]);
   works[i].addEventListener(
     "mouseover",
     setWorksBackground.bind(this, works[i].dataset.videosnippet)
@@ -164,13 +166,37 @@ function handleTouchMove(evt) {
     /*most significant*/
     if (xDiff > 0) {
       selectedIndex++;
+      !lazyLoaded && lazyLoad();
       rotateCarousel();
     } else {
       selectedIndex--;
+      !lazyLoaded && lazyLoad();
       rotateCarousel();
     }
   }
   /* reset values */
   xDown = null;
   yDown = null;
+}
+
+for (let i = 0; i < gallery.length; i++) {
+  gallery[i].addEventListener("click", () => {
+    handleImageClick(gallery[i].dataset.src);
+  });
+}
+
+function lazyLoad() {
+  lazyLoaded = true;
+  for (let i = 0; i < gallery.length; i++) {
+    gallery[i].src = gallery[i].dataset.src;
+  }
+}
+
+function handleImageClick(photo) {
+  imageModal.classList.add("show");
+  img.src = photo;
+}
+
+function closeModal() {
+  imageModal.classList.remove("show");
 }
