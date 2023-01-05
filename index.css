@@ -38,6 +38,7 @@ body {
     height: 75vh;
     margin: 80px auto;
     perspective: 1000px;
+    -webkit-perspective: 1000px;
     /* overflow-y: hidden; */
 }
 
@@ -46,7 +47,9 @@ body {
     height: 100%;
     position: absolute;
     transform: translateZ(-288px);
+    -webkit-transform: translateZ(-288px);
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     transition: transform 1s;
 }
 
@@ -345,6 +348,7 @@ h5 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
 .modal__close-button {
@@ -388,8 +392,9 @@ h5 {
 }
 
 svg {
-    visibility: hidden;
+    display: none;
     position: absolute;
+    pointer-events: none;
     top: 0;
 }
 
@@ -432,6 +437,7 @@ svg {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
     }
 
     .collaborators__bio h4 {
