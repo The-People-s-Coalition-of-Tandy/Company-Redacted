@@ -26,18 +26,18 @@ function rotateCarousel() {
 
 var prevButton = document.querySelector(".previous-button");
 prevButton.addEventListener("click", function () {
-  !lazyLoaded && lazyLoad();
   selectedIndex--;
   cells[Math.abs(mod(selectedIndex + 1, cellCount))].classList.remove("active");
   rotateCarousel();
+  !lazyLoaded && lazyLoad();
 });
 
 var nextButton = document.querySelector(".next-button");
 nextButton.addEventListener("click", function () {
-  !lazyLoaded && lazyLoad();
   selectedIndex++;
   cells[Math.abs(mod(selectedIndex - 1, cellCount))].classList.remove("active");
   rotateCarousel();
+  !lazyLoaded && lazyLoad();
 });
 
 function changeCarousel() {
@@ -175,12 +175,12 @@ function handleTouchMove(evt) {
     /*most significant*/
     if (xDiff > 0) {
       selectedIndex++;
-      !lazyLoaded && lazyLoad();
       rotateCarousel();
+      !lazyLoaded && lazyLoad();
     } else {
       selectedIndex--;
-      !lazyLoaded && lazyLoad();
       rotateCarousel();
+      !lazyLoaded && lazyLoad();
     }
   }
   /* reset values */
