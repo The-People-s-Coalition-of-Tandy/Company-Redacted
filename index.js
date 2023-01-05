@@ -141,8 +141,8 @@ for (let i = 0; i < works.length; i++) {
   works[i].addEventListener("mouseleave", removeWorksBackground);
 }
 
-document.addEventListener("touchstart", handleTouchStart, false);
-document.addEventListener("touchmove", handleTouchMove, false);
+// document.addEventListener("touchstart", handleTouchStart, false);
+// document.addEventListener("touchmove", handleTouchMove, false);
 
 var xDown = null;
 var yDown = null;

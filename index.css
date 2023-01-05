@@ -27,13 +27,12 @@ body {
     font-family: sans-serif;
     /* text-align: center; */
     /* background: rgb(13, 19, 22); */
-    background: black;
+    background: rgb(15, 15, 15);
     filter: url("#displacement-filter");
     animation: fade-in .1s forwards linear;
 }
 
 .scene {
-    margin: 40px 0;
     position: relative;
     width: 75%;
     height: 75vh;
