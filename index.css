@@ -124,7 +124,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-.shows h2,
+.shows
 h3,
 h4,
 h5 {
@@ -425,6 +425,8 @@ svg {
         height: 80%;
         top: 0px;
         overflow: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
 
     .collaborators__bio {
@@ -438,6 +440,7 @@ svg {
         left: 50%;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
+        overflow: hidden;
     }
 
     .collaborators__bio h4 {
@@ -451,6 +454,9 @@ svg {
     body,
     html {
         overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        overscroll-behavior: none;
     }
 
     body {
@@ -459,6 +465,7 @@ svg {
 
     .scene {
         width: 100%;
+        margin-top: 0;
     }
 
     .show-info {
@@ -485,8 +492,10 @@ svg {
     }
 
     .carousel-options {
-        bottom: 0px;
+        bottom: 40px;
     }
 
-    svg {}
+    svg {
+        display: none;
+    }
 }
