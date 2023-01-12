@@ -2,12 +2,6 @@
     box-sizing: border-box;
 }
 
-
-@font-face {
-    font-family: chyron;
-    src: url('./Assets/dots.otf');
-}
-
 html,
 body {
     overflow: hidden;
@@ -25,8 +19,6 @@ body {
 
 body {
     font-family: sans-serif;
-    /* text-align: center; */
-    /* background: rgb(13, 19, 22); */
     background: rgb(15, 15, 15);
     filter: url("#displacement-filter");
     animation: fade-in .1s forwards linear;
@@ -39,7 +31,6 @@ body {
     margin: 80px auto;
     perspective: 1000px;
     -webkit-perspective: 1000px;
-    /* overflow-y: hidden; */
 }
 
 .carousel {
@@ -73,11 +64,9 @@ body {
     overflow: scroll;
 }
 
-
-
 .home {
     background: none;
-    text-align: left;
+    text-align: center;
     position: relative;
     overflow: hidden;
 }
@@ -86,12 +75,14 @@ body {
     width: 100%;
     height: 100%;
     background-image: url("./Assets//Photos\ of\ Mimi\ and\ Cole/4.png");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: 60%;
+    text-align: center;
     position: absolute;
     z-index: -1;
 }
+
 
 .works__background {
     width: 100%;
@@ -247,10 +238,6 @@ h5 {
     transition: letter-spacing .2s ease-out;
 }
 
-.home h2 {
-    text-align: left;
-}
-
 .buttons-container {
     display: flex;
     flex-direction: column;
@@ -378,9 +365,6 @@ h5 {
     align-items: flex-start;
     text-align: justify;
 }
-
-
-
 
 .collaborators__bio h4 {
     font-size: large;

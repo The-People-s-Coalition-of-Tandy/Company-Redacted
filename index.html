@@ -14,8 +14,10 @@
     <div class="scene" id="scene">
         <div class="carousel">
             <div class="carousel__cell home">
-                <div class="home-background"></div>
-                <h2>Company [REDACTED]</h2>
+                <div class="home-background">
+                    <h2>Company [REDACTED]</h2>
+                </div>
+
             </div>
             <div class="carousel__cell works">
                 <div class="works__background">
@@ -160,56 +162,65 @@
                                 Boston and NYC, where she continues to build a body of repertoire with her company
                                 Motlee Party, alongside her practice as a performer, dramaturg, and writer.</p>
                         </div>
+                        <div class="collaborators__bio">
+                            <img src="./Assets/Collaborators/demetris-min.png">
+                            <div>
+                                <h4>Demetris Charalambous</h4>
+                                <p>Demetris Charalambous is a movement and performance artist from Cyprus. Their work
+                                    investigates corporeal finitude and conceptual means of transcending it. Through a
+                                    cross disciplinary practice they strive to find an aesthetic logic within
+                                    compositional displacements of their body. They are based in Brooklyn, New York.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="carousel__cell photos">
-                <h2>Photos</h2>
-                <div class="photos__gallery-wrapper">
-                    <div class="photos__gallery" id="photos__gallery">
-                        <img data-src="Assets/Photos/JP 1-min.jpg">
-                        <img data-src="Assets/Photos/JP 2.jpg">
-                        <img data-src="Assets/Photos/JP 3-min.jpg">
-                        <img data-src="Assets/Photos/JP 4-min.jpg">
-                        <img data-src="Assets/Photos/JP 5-min.jpg">
-                        <img data-src="Assets/Photos/JP 6-min.jpg">
-                        <img data-src="Assets/Photos/JP 7-min.jpg">
-                        <img data-src="Assets/Photos/JP 8-min.jpg">
-                        <img data-src="Assets/Photos/Mimi 2-min.JPG">
-                        <img data-src="Assets/Photos/Mimi 3-min.JPG">
-                        <img data-src="Assets/Photos/Photo by Cole Stapleton-min.JPG">
-                        <img data-src="Assets/Photos/Photo by Joohee-min.jpg">
-                        <img data-src="Assets/Photos/Photo by Mimi-min.JPG">
+                <div class="carousel__cell photos">
+                    <h2>Photos</h2>
+                    <div class="photos__gallery-wrapper">
+                        <div class="photos__gallery" id="photos__gallery">
+                            <img data-src="Assets/Photos/JP 1-min.jpg">
+                            <img data-src="Assets/Photos/JP 2.jpg">
+                            <img data-src="Assets/Photos/JP 3-min.jpg">
+                            <img data-src="Assets/Photos/JP 4-min.jpg">
+                            <img data-src="Assets/Photos/JP 5-min.jpg">
+                            <img data-src="Assets/Photos/JP 6-min.jpg">
+                            <img data-src="Assets/Photos/JP 7-min.jpg">
+                            <img data-src="Assets/Photos/JP 8-min.jpg">
+                            <img data-src="Assets/Photos/Mimi 2-min.JPG">
+                            <img data-src="Assets/Photos/Mimi 3-min.JPG">
+                            <img data-src="Assets/Photos/Photo by Cole Stapleton-min.JPG">
+                            <img data-src="Assets/Photos/Photo by Joohee-min.jpg">
+                            <img data-src="Assets/Photos/Photo by Mimi-min.JPG">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="carousel-options">
-        <button class="previous-button">&lt;</button>
-        <button class="next-button">&gt;</button>
-    </div>
-    <div class="image-modal" id="image-modal">
-        <button onclick="closeModal()" class="modal__close-button">X</button>
-        <img src="" id="modal-image">
-    </div>
-    <script src="./carousel.js"></script>
-    <script src="./util.js"></script>
-    <svg preserveAspectRatio="none" width="100%" height="100%">
-        <defs>
-            <filter preserveAspectRatio="none" id="displacement-filter" width="100%" height="100%" x="0" y="0"
-                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feImage preserveAspectRatio="none" width="100%" height="100%" href="./Assets/waves.jpeg" />
-                <feDisplacementMap preserveAspectRatio="none" id="fedisplacementmap" in="SourceGraphic"
-                    xChannelSelector="R" yChannelSelector="B" scale="-20000">
-                    <animate attributeName="scale" values="-50000;0" dur="1.5s" fill="freeze" calcMode="spline"
-                        keySplines="0.1 0.8 0.1 1;" />
-                </feDisplacementMap>
-            </filter>
-        </defs>
-    </svg>
+        <div class="carousel-options">
+            <button class="previous-button">&lt;</button>
+            <button class="next-button">&gt;</button>
+        </div>
+        <div class="image-modal" id="image-modal">
+            <button onclick="closeModal()" class="modal__close-button">X</button>
+            <img src="" id="modal-image">
+        </div>
+        <script src="./carousel.js"></script>
+        <script src="./util.js"></script>
+        <svg preserveAspectRatio="none" width="100%" height="100%">
+            <defs>
+                <filter preserveAspectRatio="none" id="displacement-filter" width="100%" height="100%" x="0" y="0"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feImage preserveAspectRatio="none" width="100%" height="100%" href="./Assets/waves.jpeg" />
+                    <feDisplacementMap preserveAspectRatio="none" id="fedisplacementmap" in="SourceGraphic"
+                        xChannelSelector="R" yChannelSelector="B" scale="-20000">
+                        <animate attributeName="scale" values="-50000;0" dur="1.5s" fill="freeze" calcMode="spline"
+                            keySplines="0.1 0.8 0.1 1;" />
+                    </feDisplacementMap>
+                </filter>
+            </defs>
+        </svg>
 
 </body>
 
