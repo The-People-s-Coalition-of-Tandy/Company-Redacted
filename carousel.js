@@ -29,7 +29,9 @@ prevButton.addEventListener("click", function () {
   selectedIndex--;
   cells[Math.abs(mod(selectedIndex + 1, cellCount))].classList.remove("active");
   rotateCarousel();
-  !lazyLoaded && lazyLoad();
+  !lazyLoaded &&
+    Math.abs(mod(selectedIndex + 1, cellCount)) === 5 &&
+    lazyLoad();
 });
 
 var nextButton = document.querySelector(".next-button");
@@ -37,7 +39,9 @@ nextButton.addEventListener("click", function () {
   selectedIndex++;
   cells[Math.abs(mod(selectedIndex - 1, cellCount))].classList.remove("active");
   rotateCarousel();
-  !lazyLoaded && lazyLoad();
+  !lazyLoaded &&
+    Math.abs(mod(selectedIndex + 1, cellCount)) === 6 &&
+    lazyLoad();
 });
 
 function changeCarousel() {
