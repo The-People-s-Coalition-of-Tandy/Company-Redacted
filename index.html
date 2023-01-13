@@ -1,3 +1,4 @@
+<!-- Designed by julipode.net via PCoTandy Web Services -->
 <!DOCTYPE html>
 <html>
 
@@ -13,13 +14,15 @@
 <body>
     <div class="scene" id="scene">
         <div class="carousel">
+
             <div class="carousel__cell home">
                 <div class="home-background">
                     <h2>Company [REDACTED]</h2>
                 </div>
-
             </div>
+
             <div class="carousel__cell works">
+                <!-- This div works__background shows a video of whatever work is being hovered on desktop -->
                 <div class="works__background">
                     <video id="works__background-video" width="100%" height="100%" autoplay loop playsinline muted>
                         <source id="works__background-source" src="">
@@ -27,6 +30,9 @@
                     </video>
                 </div>
                 <h2>Works</h2>
+
+                <!-- Include a small reel of each recorded work and link to the reel in "data-videoSnippet" attribute -->
+                <!-- This will allow "setWorksBackground" in util.js set the src of the background to the reel -->
                 <a href="https://youtu.be/e_qwEk49zV4" class="works__link"
                     data-videoSnippet="./Assets/Videos/background.mov">Some
                     Land of
@@ -78,7 +84,9 @@
                     </div>
                     <div class="credits__performance">
                         <span class="credits__show-venue"><b>464 Works in Progress Series &#8211; Ridgewood, NY</b>
-                            <i>2022</i></span><br>
+                            <i>2022</i>
+                        </span>
+                        <br>
                         <span class="credits__show-name">Some Land of Redemption: Vanity Under the Sun</span><br>
                     </div>
                     <div class="credits__performance">
@@ -174,54 +182,54 @@
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
 
-                <div class="carousel__cell photos">
-                    <h2>Photos</h2>
-                    <div class="photos__gallery-wrapper">
-                        <div class="photos__gallery" id="photos__gallery">
-                            <img data-src="Assets/Photos/JP 1-min.jpg">
-                            <img data-src="Assets/Photos/JP 2.jpg">
-                            <img data-src="Assets/Photos/JP 3-min.jpg">
-                            <img data-src="Assets/Photos/JP 4-min.jpg">
-                            <img data-src="Assets/Photos/JP 5-min.jpg">
-                            <img data-src="Assets/Photos/JP 6-min.jpg">
-                            <img data-src="Assets/Photos/JP 7-min.jpg">
-                            <img data-src="Assets/Photos/JP 8-min.jpg">
-                            <img data-src="Assets/Photos/Mimi 2-min.JPG">
-                            <img data-src="Assets/Photos/Mimi 3-min.JPG">
-                            <img data-src="Assets/Photos/Photo by Cole Stapleton-min.JPG">
-                            <img data-src="Assets/Photos/Photo by Joohee-min.jpg">
-                            <img data-src="Assets/Photos/Photo by Mimi-min.JPG">
-                        </div>
+            <div class="carousel__cell photos">
+                <h2>Photos</h2>
+                <div class="photos__gallery-wrapper">
+                    <div class="photos__gallery" id="photos__gallery">
+                        <img data-src="Assets/Photos/JP 1-min.jpg">
+                        <img data-src="Assets/Photos/JP 2.jpg">
+                        <img data-src="Assets/Photos/JP 3-min.jpg">
+                        <img data-src="Assets/Photos/JP 4-min.jpg">
+                        <img data-src="Assets/Photos/JP 5-min.jpg">
+                        <img data-src="Assets/Photos/JP 6-min.jpg">
+                        <img data-src="Assets/Photos/JP 7-min.jpg">
+                        <img data-src="Assets/Photos/JP 8-min.jpg">
+                        <img data-src="Assets/Photos/Mimi 2-min.JPG">
+                        <img data-src="Assets/Photos/Mimi 3-min.JPG">
+                        <img data-src="Assets/Photos/Photo by Cole Stapleton-min.JPG">
+                        <img data-src="Assets/Photos/Photo by Joohee-min.jpg">
+                        <img data-src="Assets/Photos/Photo by Mimi-min.JPG">
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="carousel-options">
-            <button class="previous-button">&lt;</button>
-            <button class="next-button">&gt;</button>
-        </div>
-        <div class="image-modal" id="image-modal">
-            <button onclick="closeModal()" class="modal__close-button">X</button>
-            <img src="" id="modal-image">
-        </div>
-        <script src="./carousel.js"></script>
-        <script src="./util.js"></script>
-        <svg preserveAspectRatio="none" width="100%" height="100%">
-            <defs>
-                <filter preserveAspectRatio="none" id="displacement-filter" width="100%" height="100%" x="0" y="0"
-                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feImage preserveAspectRatio="none" width="100%" height="100%" href="./Assets/waves.jpeg" />
-                    <feDisplacementMap preserveAspectRatio="none" id="fedisplacementmap" in="SourceGraphic"
-                        xChannelSelector="R" yChannelSelector="B" scale="-20000">
-                        <animate attributeName="scale" values="-50000;0" dur="1.5s" fill="freeze" calcMode="spline"
-                            keySplines="0.1 0.8 0.1 1;" />
-                    </feDisplacementMap>
-                </filter>
-            </defs>
-        </svg>
+    <div class="carousel-options">
+        <button class="previous-button">&lt;</button>
+        <button class="next-button">&gt;</button>
+    </div>
+    <div class="image-modal" id="image-modal">
+        <button onclick="closeModal()" class="modal__close-button">X</button>
+        <img src="" id="modal-image">
+    </div>
+    <script src="./carousel.js"></script>
+    <script src="./util.js"></script>
+    <svg preserveAspectRatio="none" width="100%" height="100%">
+        <defs>
+            <filter preserveAspectRatio="none" id="displacement-filter" width="100%" height="100%" x="0" y="0"
+                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feImage preserveAspectRatio="none" width="100%" height="100%" href="./Assets/waves.jpeg" />
+                <feDisplacementMap preserveAspectRatio="none" id="fedisplacementmap" in="SourceGraphic"
+                    xChannelSelector="R" yChannelSelector="B" scale="-20000">
+                    <animate attributeName="scale" values="-50000;0" dur="1.5s" fill="freeze" calcMode="spline"
+                        keySplines="0.1 0.8 0.1 1;" />
+                </feDisplacementMap>
+            </filter>
+        </defs>
+    </svg>
 
 </body>
 

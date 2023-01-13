@@ -56,7 +56,7 @@ body {
     transition: transform 1s, opacity 1s;
     border-radius: 2px;
     pointer-events: none;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .carousel__cell.active {
@@ -68,7 +68,7 @@ body {
     background: none;
     text-align: center;
     position: relative;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .home-background {
@@ -173,7 +173,7 @@ h5 {
 
 .about {
     background-color: rgba(0, 0, 0, 0.9);
-    overflow-y: scroll;
+    overflow: scroll;
 }
 
 .about h3 {
@@ -424,7 +424,7 @@ svg {
         left: 50%;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
-        overflow-y: hidden;
+        overflow: hidden;
     }
 
     .collaborators__bio h4 {
@@ -469,6 +469,10 @@ svg {
     .works__link {
         font-size: 1.3rem;
         line-height: 5ch;
+    }
+
+    .works__background {
+        display: none;
     }
 
     img {
