@@ -4,10 +4,10 @@ var cellCount = 6;
 var selectedIndex = 0;
 var cellWidth = carousel.offsetWidth;
 var cellHeight = carousel.offsetHeight;
-var isHorizontal = window.innerWidth < 1000 ? true : true;
+// var isHorizontal = window.innerWidth < 1000 ? false : true;
+var isHorizontal = true;
 var rotateFn = isHorizontal ? "rotateY" : "rotateX";
 var radius, theta;
-
 var lazyLoaded = false;
 
 function mod(n, m) {
@@ -30,7 +30,7 @@ prevButton.addEventListener("click", function () {
   cells[Math.abs(mod(selectedIndex + 1, cellCount))].classList.remove("active");
   rotateCarousel();
   !lazyLoaded &&
-    Math.abs(mod(selectedIndex + 1, cellCount)) === 5 &&
+    Math.abs(mod(selectedIndex + 1, cellCount)) === 0 &&
     lazyLoad();
 });
 
@@ -40,7 +40,7 @@ nextButton.addEventListener("click", function () {
   cells[Math.abs(mod(selectedIndex - 1, cellCount))].classList.remove("active");
   rotateCarousel();
   !lazyLoaded &&
-    Math.abs(mod(selectedIndex + 1, cellCount)) === 6 &&
+    Math.abs(mod(selectedIndex + 1, cellCount)) === 0 &&
     lazyLoad();
 });
 
