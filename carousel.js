@@ -1,6 +1,6 @@
 var carousel = document.querySelector(".carousel");
 var cells = carousel.querySelectorAll(".carousel__cell");
-var cellCount = 6;
+var cellCount = 5;
 var selectedIndex = 0;
 var cellWidth = carousel.offsetWidth;
 var cellHeight = carousel.offsetHeight;
