@@ -31,6 +31,7 @@ body {
     margin: 80px auto;
     perspective: 1000px;
     -webkit-perspective: 1000px;
+    will-change: transform;
 }
 
 .carousel {
@@ -42,9 +43,11 @@ body {
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transition: transform 1s;
+    will-change: transform;
+
 }
 
-.carousel__cell {
+/* .carousel__cell {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -57,12 +60,12 @@ body {
     border-radius: 2px;
     pointer-events: none;
     overflow: hidden;
-}
+} */
 
-.carousel__cell.active {
+/* .carousel__cell.active {
     pointer-events: auto;
     overflow: scroll;
-}
+} */
 
 .home {
     background: none;
@@ -83,7 +86,7 @@ body {
     z-index: -1;
 }
 
-
+/* 
 .works__background {
     width: 100%;
     height: 100%;
@@ -91,9 +94,9 @@ body {
     position: absolute;
     filter: brightness(50%);
     opacity: 50%;
-}
+} */
 
-.works__link,
+/* .works__link,
 .works__link:visited {
     color: white;
     margin: 10%;
@@ -103,7 +106,49 @@ body {
 
 .works__link:hover {
     color: rgb(170, 170, 170);
+} */
+
+.carousel__cell {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 10px;
+    color: white;
+    transition: transform 1s, opacity 1s;
+    border-radius: 2px;
+    pointer-events: none; /* Keep pointer events disabled for non-active cells */
+    /* overflow: hidden; Default hidden overflow */
 }
+
+.carousel__cell.active {
+    pointer-events: auto; /* Enable pointer events on the active cell */
+    /* overflow: scroll; Allow scrolling for active cell */
+}
+
+.works__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure background video is below the clickable elements */
+}
+
+.works__link {
+    position: relative;
+    z-index: 10; /* Ensure links are above any background content */
+    color: white;
+    line-height: 100px;
+    font-size: 2rem;
+    margin: 10% 0;
+}
+
+.works__link:hover {
+    color: rgb(170, 170, 170);
+}
+
+
 
 h2 {
     font-size: 2.2rem;
@@ -132,14 +177,16 @@ h5 {
     max-height: 90%;
     margin-top: 10px;
     width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .show-info {
     border-bottom: 1px solid white;
     padding: 10px 20px;
     text-align: left;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     white-space: nowrap;
 }
@@ -204,7 +251,7 @@ h5 {
 }
 
 .photos {
-    background-color: rgba(0, 0, 0, 0.493);
+    background-color: rgba(0, 0, 0, 0.95);
 }
 
 .carousel-options {
@@ -267,20 +314,21 @@ h5 {
     user-select: none;
 }
 
-.photos {
-    overflow: scroll;
-}
 
 .photos__gallery-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
+    height: calc(100% - 2.2rem - 80px);
+    /* max-height: 500px; */
+    overflow: scroll
 }
 
 .photos__gallery {
     width: 90%;
     display: grid;
     justify-items: center;
+    align-items: center;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     margin: 20px;
