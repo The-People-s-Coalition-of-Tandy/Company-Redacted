@@ -77,9 +77,9 @@ body {
 .home-background {
     width: 100%;
     height: 100%;
-    background-image: url("./Assets//Photos\ of\ Mimi\ and\ Cole/ps-shoot-19.jpg");
+    background-image: url("./Assets//Photos\ of\ Mimi\ and\ Cole/1-way_poster.JPG");
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-position: 60%;
     text-align: center;
     position: absolute;
