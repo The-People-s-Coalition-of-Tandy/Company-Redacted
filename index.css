@@ -77,9 +77,9 @@ body {
 .home-background {
     width: 100%;
     height: 100%;
-    background-image: url("./Assets//Photos\ of\ Mimi\ and\ Cole/1-way_poster.JPG");
+    background-image: url("./Assets/Photos/cannonball_poster.PNG");
     background-size: contain;
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
     background-position: 60%;
     text-align: center;
     position: absolute;
@@ -330,7 +330,7 @@ h5 {
     justify-items: center;
     align-items: center;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     margin: 20px;
 }
 
